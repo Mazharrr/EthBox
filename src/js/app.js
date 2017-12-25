@@ -3,22 +3,15 @@ App = {
   contracts: {},
 
   init: function() {
-    // Load pets.
-    $.getJSON('../pets.json', function(data) {
-      var petsRow = $('#petsRow');
-      var petTemplate = $('#petTemplate');
+    var entriesRow = $('#entriesRow');
+    var entryTemplate = $('#entryTemplate');
 
-      for (i = 0; i < data.length; i ++) {
-        petTemplate.find('.panel-title').text(data[i].name);
-        petTemplate.find('img').attr('src', data[i].picture);
-        petTemplate.find('.pet-breed').text(data[i].breed);
-        petTemplate.find('.pet-age').text(data[i].age);
-        petTemplate.find('.pet-location').text(data[i].location);
-        petTemplate.find('.btn-adopt').attr('data-id', data[i].id);
+    entryTemplate.find('.panel-title').text("entry one");
+    entryTemplate.find('.entry-description').text("Description for this entry");
+    entryTemplate.find('.entry-price').text("10.23");
+    entryTemplate.find('.entry-seller').text("0x01234567890123456789012345678901");
 
-        petsRow.append(petTemplate.html());
-      }
-    });
+    entriesRow.append(entryTemplate.html());
 
     return App.initWeb3();
   },
