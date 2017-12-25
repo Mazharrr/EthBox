@@ -13,7 +13,7 @@ contract EthBox {
     price = _price;
   }
 
-  function getArticle() public constant returns (address _seller, string _name, string _description, uint256 _price) {
+  function getEntry() public constant returns (address _seller, string _name, string _description, uint256 _price) {
     return(seller, name, description, price);
   }
 }
