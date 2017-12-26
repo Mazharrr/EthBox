@@ -18,7 +18,7 @@ App = {
 
   initWeb3: function() {
     /*
-     * Replace me...
+
      */
 
     return App.initContract();
