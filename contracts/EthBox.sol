@@ -6,6 +6,10 @@ contract EthBox {
   string description;
   uint256 price;
 
+  function EthBox() {
+    sellEntry("Default entry name", "Default description", 100000000000000000);
+  }
+
   function sellEntry(string _name, string _description, uint _price) public {
     seller = msg.sender;
     name = _name;
